@@ -1,7 +1,15 @@
+import sys
 import os
 import json
 import torch
 import torchmetrics
+from tqdm import tqdm
+
+sys.path.append(os.path.join('..', 'config'))
+from config import CONFIG 
+
+DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
 
 class ModelSaver:
     """
@@ -34,7 +42,7 @@ def fetch_label_mappings(file_path):
     """
     with open(file_path,"r") as f:
        label_to_idx = json.loads(f.read())
-       idx_to_label = { i:label for label, idx in label_to_idx.items()}
+       idx_to_label = { idx:label for label, idx in label_to_idx.items()}
        return idx_to_label, label_to_idx
 
 
@@ -54,7 +62,7 @@ def eval_one_epoch(model,loader,compute_metrics={}):
     total_predictions = 0
     predictions, trues = [], []
     
-    for batch in tqdm(loader, disable = False):
+    for batch in tqdm(loader, disable = CONFIG['DISABLE_TQDM'],position=1):
         images = batch['pixel_values'].to(DEVICE)
         labels = batch['label'].to(DEVICE)
         model.eval()
