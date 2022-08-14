@@ -4,6 +4,7 @@ import json
 import PIL
 import sys
 import pandas as pd 
+import json
 from tqdm import tqdm
 
 sys.path.append(os.path.join('..', 'config'))
@@ -34,7 +35,7 @@ def main():
   """
   Reads the images from the datasets and creates Train and Test Dataframes which contains the paths 
   of images and labels
-  Saves the dataframes in data/ folder
+  Saves the dataframes and label id mapping in data/ folder
   """
   print("Processing the train dataset...")
   train_paths,train_labels = compile_dataset_image_paths(CONFIG['DATASET_TRAIN_PATH'])
@@ -54,7 +55,11 @@ def main():
 
   train_df.to_csv("../data/train.csv",index=False)
   test_df.to_csv("../data/test.csv",index=False)
-  print("Saved the dataframes at data/")
+
+  with open("../data/label_to_idx.json","w") as f:
+    f.write(json.dumps(label_to_idx))
+
+  print("Saved the dataframes and label_id mapping at data/")
 
 
 if __name__ == '__main__':
