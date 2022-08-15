@@ -26,12 +26,7 @@ import cv2
 
 from transformers import ViTForImageClassification,ViTFeatureExtractor
 
-sys.path.append(os.path.join('..', 'config'))
-sys.path.append(os.path.join('..', 'dataset'))
-sys.path.append(os.path.join('..', 'utils'))
-
-
-from config import CONFIG 
+from config import CONFIG
 from dataset import Places365
 from utils import ModelSaver, fetch_label_mappings, eval_one_epoch,collate_fn
 
@@ -88,9 +83,11 @@ def main():
     """
     Finetunes the Vision Transformer model on the Places365 dataset and logs the metrics in wandb dashboard.
     """
-    train_df = pd.read_csv("../data/train.csv")
-    test_df = pd.read_csv("../data/test.csv")
-    idx_to_label,label_to_idx = fetch_label_mappings("../data/label_to_idx.json")
+    train_df = pd.read_csv(os.path.join(CONFIG['DATASET_MAPPINGS_PATH'], "train.csv"))
+    test_df = pd.read_csv(os.path.join(CONFIG['DATASET_MAPPINGS_PATH'], "test.csv"))
+    idx_to_label,label_to_idx = fetch_label_mappings(\
+                                os.path.join(CONFIG['DATASET_MAPPINGS_PATH'], "label_to_idx.json"))
+
     num_labels = len(idx_to_label)
 
     feature_extractor = ViTFeatureExtractor.from_pretrained(MODEL_NAME)
@@ -99,6 +96,7 @@ def main():
     train_dataset, valid_dataset = torch.utils.data.random_split(dataset, \
         [len(dataset)-len(test_df), len(test_df)], \
         generator=torch.Generator().manual_seed(42))
+
 
     wandb_config = dict(
         epochs = 1,

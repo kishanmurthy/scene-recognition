@@ -6,9 +6,6 @@ import sys
 import pandas as pd 
 import json
 from tqdm import tqdm
-
-sys.path.append(os.path.join('..', 'config'))
-
 from config import CONFIG
 
 def compile_dataset_image_paths(path):
@@ -35,7 +32,7 @@ def main():
   """
   Reads the images from the datasets and creates Train and Test Dataframes which contains the paths 
   of images and labels
-  Saves the dataframes and label id mapping in data/ folder
+  Saves the dataframes and label id mapping in data_mappings folder
   """
   print("Processing the train dataset...")
   train_paths,train_labels = compile_dataset_image_paths(CONFIG['DATASET_TRAIN_PATH'])
@@ -53,21 +50,17 @@ def main():
   test_df = pd.DataFrame({'path': test_paths, 'label': test_labels})
   test_df['label_id'] = test_df['label'].apply(lambda x: label_to_idx[x])
 
-  train_df.to_csv("../data/train.csv",index=False)
-  test_df.to_csv("../data/test.csv",index=False)
+  train_df.to_csv(os.path.join(CONFIG['DATASET_MAPPINGS_PATH'], "train.csv"),index=False)
+  test_df.to_csv(os.path.join(CONFIG['DATASET_MAPPINGS_PATH'], "test.csv"),index=False)
 
-  with open("../data/label_to_idx.json","w") as f:
+  with open(os.path.join(CONFIG['DATASET_MAPPINGS_PATH'], "label_to_idx.json"),"w") as f:
     f.write(json.dumps(label_to_idx))
 
-  print("Saved the dataframes and label_id mapping at data/")
+  print(f"Saved the dataframes and label_id mapping at {CONFIG['DATASET_MAPPINGS_PATH']}")
 
 
 if __name__ == '__main__':
   main()
-
-
-
-    
 
 
 

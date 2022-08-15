@@ -5,7 +5,6 @@ import torch
 import torchmetrics
 from tqdm import tqdm
 
-sys.path.append(os.path.join('..', 'config'))
 from config import CONFIG 
 
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
