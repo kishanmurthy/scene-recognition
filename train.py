@@ -75,8 +75,12 @@ def train_model(model,training_params):
 
                 wandb.log(metrics)
                 wandb.log({'duration': time.time() - start})
-                
-                
+
+        valid_loss, metrics = eval_one_epoch(model,training_params['valid_loader'], training_params['compute_metrics'])
+        metrics['valid_loss'] = valid_loss
+        training_params['model_saver'].save(model,valid_loss)
+        wandb.log(metrics)
+        wandb.log({'duration': time.time() - start})
         wandb.log({'epoch_duration': time.time() - start})
 
 def main():
