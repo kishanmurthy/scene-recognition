@@ -110,13 +110,13 @@ def main():
 
 
     wandb.init(
-        dir= "/scratch2/knarasim/places365",
+        dir= CONFIG['WANDB_PATH'],
         project="Places365",
         notes="Finetune Vision Transformer",
         tags=["VIT","Places365"],
         config=wandb_config
     )
-
+    
     train_loader = DataLoader(train_dataset, batch_size=wandb_config['batch_size'], shuffle=True, num_workers=8,collate_fn=collate_fn)
     valid_loader = DataLoader(valid_dataset, batch_size=wandb_config['batch_size'], shuffle=True, num_workers=8,collate_fn=collate_fn)
     labels = list(label_to_idx.keys())

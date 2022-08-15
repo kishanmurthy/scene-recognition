@@ -80,7 +80,7 @@ def eval_one_epoch(model,loader,compute_metrics={}):
 
     metrics = {}
     for metric_name, metric in compute_metrics.items():
-        metrics[metric_name] = metric(predictions, trues)
+        metrics[metric_name] = metric(predictions, trues).item()
 
     return epoch_loss, metrics
 
@@ -97,3 +97,8 @@ def collate_fn(batch):
         'pixel_values': torch.cat([x['pixel_values'] for x in batch], 0),
         'label': torch.tensor([x['label'] for x in batch])
     }
+
+def pretty_print_results(metrics):
+    print("Test Results")
+    for metric_name, metric_value in metrics.items():
+        print(f"{metric_name} :  {metric_value}")
