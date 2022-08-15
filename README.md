@@ -12,12 +12,12 @@ Evaluation performed on the test set.
 
 | Metric | Value |
 |--------|-------|
-|Accuracy Top 5 | - |
-|Accuracy Top 1 | - |
-|AUROC | - |
-|F1-Score | - |
-|Precision| - |
-|Recall | - |
+|AUROC | **98.85** |
+|Accuracy Top 5 | **81.87** |
+|Accuracy Top 1 | **49.91** |
+|F1-Score | **49.14** |
+|Precision| **51.14** |
+|Recall | **49.91** |
 
 ## How to Run
 
