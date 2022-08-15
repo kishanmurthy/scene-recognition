@@ -20,3 +20,5 @@ Evaluation performed on the test set.
 |Recall | - |
 
 ## How to Run
+
+1. Set the right paths to dataset, wandb directory in config.py.
