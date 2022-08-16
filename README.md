@@ -39,7 +39,7 @@ The metrics were logged with the help of Weights and Biases. This specific run c
 
 ## Evaluation on the Test dataset
 
-The trained Vision Transformer Model was evaluated on the Places365 test dataset and obtained the following results:
+The [Trained Vision Transformer Model]() was evaluated on the Places365 test dataset and obtained the following results:
 
 | Metric | Value |
 |--------|-------|
@@ -52,11 +52,12 @@ The trained Vision Transformer Model was evaluated on the Places365 test dataset
 
 ## How to Run
 1. Download the [Places365 Standard dataset.](http://places2.csail.mit.edu/)
-2. Update the paths of 
+2. Install the requirements from **requirements.txt**.
+3. Update the paths of 
     - **DATASET_TRAIN_PATH** : Path of Places365 Standard training dataset.
     - **DATASET_TEST_PATH** : Path of Places365 Standard validation dataset.
     - **DATASET_MAPPINGS_PATH** : Path to store the dataset mappings for train and test datasets.
     - **WANDB_PATH** : Path to initialize Weights and Bias runs.
-3.  Run preprocess_dataset.py to create a mapping of images.
-4.  Train the model by running the train.py script.
-5.  Evaluate the model on the test dataset by running the evaluate_test.py script.
+4.  Run preprocess_dataset.py to create a mapping of images.
+5.  Train the model by running the train.py script.
+6.  Evaluate the model on the test dataset by running the evaluate_test.py script.
