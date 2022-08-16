@@ -57,6 +57,6 @@ The trained Vision Transformer Model was evaluated on the Places365 test dataset
     - **DATASET_TEST_PATH** : Path of Places365 Standard validation dataset.
     - **DATASET_MAPPINGS_PATH** : Path to store the dataset mappings for train and test datasets.
     - **WANDB_PATH** : Path to initialize Weights and Bias runs.
-3.  Run preprocess_dataset.py to create mapping of images.
-4.  Train the model by running train.py script.
-5.  Evaluate the model on the test dataset by running evaluate_test.py script.
+3.  Run preprocess_dataset.py to create a mapping of images.
+4.  Train the model by running the train.py script.
+5.  Evaluate the model on the test dataset by running the evaluate_test.py script.
