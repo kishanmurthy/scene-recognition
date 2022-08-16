@@ -39,7 +39,7 @@ The metrics were logged with the help of Weights and Biases. This specific run c
 
 ## Evaluation on the Test dataset
 
-The [Trained Vision Transformer Model]() was evaluated on the Places365 test dataset and obtained the following results:
+The [Trained Vision Transformer Model](https://api.wandb.ai/files/kishanmurthyusc/Places365/1vio1g1i/vit_trained.pt) was evaluated on the Places365 test dataset and obtained the following results:
 
 | Metric | Value |
 |--------|-------|
