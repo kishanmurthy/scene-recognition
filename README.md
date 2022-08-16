@@ -3,6 +3,8 @@ Classification of 365 Scenes by fine-tuning Vision Transformer on [Places365 Sta
 
 ## Example Scenes
 
+The Places365 dataset contains 365 Scenes. Below are a few example scenes.
+
 | Images | Labels|
 |--------|-------|
 | ![baseball_field_00000517](https://user-images.githubusercontent.com/25534697/184756455-7ab798bb-2cd4-4907-8e8b-0c3060361d40.png)| Baseball Field|
@@ -35,13 +37,9 @@ The metrics were logged with the help of Weights and Biases. This specific run c
 
 <img width="1352" alt="Screen Shot 2022-08-15 at 5 35 12 PM" src="https://user-images.githubusercontent.com/25534697/184759021-0b0941ca-16c6-40a0-8741-d4b46a823eb7.png">
 
-
-
-
 ## Evaluation on the Test dataset
 
-
-Evaluation performed on the test set.
+The trained Vision-Transformer Model was evaluated on the Places365 test dataset and obtained the following results:
 
 | Metric | Value |
 |--------|-------|
@@ -55,11 +53,10 @@ Evaluation performed on the test set.
 ## How to Run
 1. Download the [Places365 Standard dataset.](http://places2.csail.mit.edu/)
 2. Update the paths of 
-    - DATASET_TRAIN_PATH : Path of Places365 Standard training dataset.
-    - DATASET_TEST_PATH : Path of Places365 Standard validation dataset.
-    - DATASET_MAPPINGS_PATH : Path to store the dataset mappings for train and test datasets.
-    - WANDB_PATH : Path to initialize Weights and Bias runs.
+    - **DATASET_TRAIN_PATH** : Path of Places365 Standard training dataset.
+    - **DATASET_TEST_PATH** : Path of Places365 Standard validation dataset.
+    - **DATASET_MAPPINGS_PATH** : Path to store the dataset mappings for train and test datasets.
+    - **WANDB_PATH** : Path to initialize Weights and Bias runs.
 3.  Run preprocess_dataset.py to create mapping of images.
 4.  Train the model by running train.py script.
 5.  Evaluate the model on the test dataset by running evaluate.py script.
-
