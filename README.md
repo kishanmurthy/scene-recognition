@@ -18,8 +18,18 @@ Classification of 365 Scenes by fine-tuning Vision Transformer on [Places365 Sta
 ## Training
 
 
+The [Vision Transformer model](https://huggingface.co/docs/transformers/model_doc/vit) was finetuned on the Places365 dataset with the hyperparmeters as follows:
+
+|Hyperparameter | Value |
+|---------------|-------|
+| Batch Size | 32      |
+| Learning Rate | 2e-4 |
+| Optimizer | AdamW    |
+| No of Epochs | 1           |
+| Evaluate Validation </br> after | 5000 </br> batches|
 
 
+The metrics were logged with the help of Weights and Biases. This specific run can be found [here](https://wandb.ai/kishanmurthyusc/Places365/runs/1vio1g1i).
 
 <img width="1355" alt="Screen Shot 2022-08-15 at 5 38 48 PM" src="https://user-images.githubusercontent.com/25534697/184759356-4224c4ea-0b37-414c-ad1c-0389bb46f78e.png">
 
