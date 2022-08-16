@@ -15,7 +15,22 @@ Classification of 365 Scenes by fine-tuning Vision Transformer on [Places365 Sta
 |![office_cubicles_00000716](https://user-images.githubusercontent.com/25534697/184757003-01c637b8-5eff-40c6-9032-ed7c395713e8.png) | Office Cubicles |
 |![reception_00002637](https://user-images.githubusercontent.com/25534697/184757030-c9def29e-45d8-4f34-ba4d-6a9f0aefbcaa.png) | Reception |
 
-## Result
+## Training
+
+
+
+
+
+<img width="1355" alt="Screen Shot 2022-08-15 at 5 38 48 PM" src="https://user-images.githubusercontent.com/25534697/184759356-4224c4ea-0b37-414c-ad1c-0389bb46f78e.png">
+
+<img width="1352" alt="Screen Shot 2022-08-15 at 5 35 12 PM" src="https://user-images.githubusercontent.com/25534697/184759021-0b0941ca-16c6-40a0-8741-d4b46a823eb7.png">
+
+
+
+
+## Evaluation on the Test dataset
+
+
 Evaluation performed on the test set.
 
 | Metric | Value |
