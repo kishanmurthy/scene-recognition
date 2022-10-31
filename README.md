@@ -17,6 +17,7 @@ The Places365 dataset contains 365 Scenes. Below are a few example scenes.
 |![office_cubicles_00000716](https://user-images.githubusercontent.com/25534697/184757003-01c637b8-5eff-40c6-9032-ed7c395713e8.png) | Office Cubicles |
 |![reception_00002637](https://user-images.githubusercontent.com/25534697/184757030-c9def29e-45d8-4f34-ba4d-6a9f0aefbcaa.png) | Reception |
 
+
 ## Training
 
 
@@ -33,9 +34,10 @@ The [Vision Transformer model](https://huggingface.co/docs/transformers/model_do
 
 The metrics were logged with the help of Weights and Biases. This specific run can be found [here](https://wandb.ai/kishanmurthyusc/Places365/runs/1pv3a7ql).
 
-<img width="1355" alt="Screen Shot 2022-08-15 at 5 38 48 PM" src="https://user-images.githubusercontent.com/25534697/184759356-4224c4ea-0b37-414c-ad1c-0389bb46f78e.png">
+![Screenshot 2022-10-31 at 10 44 22 AM](https://user-images.githubusercontent.com/25534697/199074305-027e7a2d-8cbf-4d5b-9c0d-9c4a25b3b0b8.png)
 
-<img width="1352" alt="Screen Shot 2022-08-15 at 5 35 12 PM" src="https://user-images.githubusercontent.com/25534697/184759021-0b0941ca-16c6-40a0-8741-d4b46a823eb7.png">
+![Screenshot 2022-10-31 at 10 38 15 AM](https://user-images.githubusercontent.com/25534697/199073641-e847c75a-1483-4262-b1a1-3732c9cae6f2.png)
+
 
 ## Evaluation on the Test dataset
 
