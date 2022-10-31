@@ -27,11 +27,11 @@ The [Vision Transformer model](https://huggingface.co/docs/transformers/model_do
 | Batch Size | 32      |
 | Learning Rate | 2e-4 |
 | Optimizer | AdamW    |
-| No of Epochs | 1           |
+| No of Epochs | 5           |
 | Evaluate Validation </br> after | 5000 </br> batches|
 
 
-The metrics were logged with the help of Weights and Biases. This specific run can be found [here](https://wandb.ai/kishanmurthyusc/Places365/runs/1vio1g1i).
+The metrics were logged with the help of Weights and Biases. This specific run can be found [here](https://wandb.ai/kishanmurthyusc/Places365/runs/1pv3a7ql).
 
 <img width="1355" alt="Screen Shot 2022-08-15 at 5 38 48 PM" src="https://user-images.githubusercontent.com/25534697/184759356-4224c4ea-0b37-414c-ad1c-0389bb46f78e.png">
 
@@ -41,14 +41,14 @@ The metrics were logged with the help of Weights and Biases. This specific run c
 
 The [Trained Vision Transformer Model](https://api.wandb.ai/files/kishanmurthyusc/Places365/1vio1g1i/vit_trained.pt) was evaluated on the Places365 test dataset and obtained the following results:
 
-| Metric | Value |
-|--------|-------|
-|AUROC | 98.85 |
-|Accuracy Top 5 | 81.87 |
-|Accuracy Top 1 | 49.91 |
-|F1-Score | 49.14 |
-|Precision| 51.14 |
-|Recall | 49.91 |
+| Metric |Value - Epoch 5 |
+|--------|-----------|
+|AUROC | 98.93 |
+|Accuracy Top 5 | 83.48 |
+|Accuracy Top 1 | 52.22|
+|F1-Score | 52.22|
+|Precision| 52.56 |
+|Recall | 52.14 |
 
 ## How to Run
 1. Download the [Places365 Standard dataset.](http://places2.csail.mit.edu/)
