@@ -103,7 +103,7 @@ def main():
 
 
     wandb_config = dict(
-        epochs = 1,
+        epochs = 5,
         lr = 2e-4,
         batch_size = 32,
         evaluate_every = 5000,
