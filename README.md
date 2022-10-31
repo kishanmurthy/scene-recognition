@@ -45,12 +45,12 @@ The [Trained Vision Transformer Model](https://api.wandb.ai/files/kishanmurthyus
 
 | Metric |Value |
 |--------|-----------|
-|AUROC | 98.93 |
-|Accuracy Top 5 | 83.48 |
-|Accuracy Top 1 | 52.22|
-|F1-Score | 52.22|
-|Precision| 52.56 |
-|Recall | 52.14 |
+|AUROC | 98.90 |
+|Accuracy Top 5 | 83.52 |
+|Accuracy Top 1 | 52.47|
+|F1-Score | 51.71|
+|Precision| 52.70 |
+|Recall | 52.47 |
 
 ## How to Run
 1. Download the [Places365 Standard dataset.](http://places2.csail.mit.edu/)
