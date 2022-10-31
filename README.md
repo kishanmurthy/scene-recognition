@@ -41,7 +41,7 @@ The metrics were logged with the help of Weights and Biases. This specific run c
 
 The [Trained Vision Transformer Model](https://api.wandb.ai/files/kishanmurthyusc/Places365/1vio1g1i/vit_trained.pt) was evaluated on the Places365 test dataset and obtained the following results:
 
-| Metric |Value - Epoch 5 |
+| Metric |Value |
 |--------|-----------|
 |AUROC | 98.93 |
 |Accuracy Top 5 | 83.48 |
